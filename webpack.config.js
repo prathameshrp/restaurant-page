@@ -10,16 +10,21 @@ module.exports = {
     },
     devtool: "eval-source-map",
     devServer: {
-        watchFiles: ["./src/template.html"],
+        watchFiles: ["./src/template.html", "./src/style.css"],
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/template.html",
-            favicon: "./src/images/plogo.ico",
+            favicon: "./src/assets/images/plogo.ico",
         }),
     ],
     module: {
         rules:[
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+            }
+            ,
             {
                 test: /\.html$/i,
                 loader: "html-loader",

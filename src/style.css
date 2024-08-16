@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root
+{
+    --primary-font: 'playfair_display';
+    --secondary-font: 'josefin_sans';
+}
+body
+{
+    height: fit-content;
+    width: 100vw;
+    background: url("assets/images/background.jpg") no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+}
+body::after
+{
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+    z-index: -3;
+}
+header
+{
+    /* background-color: aqua;
+     */
+     backdrop-filter: blur(10px);
+     box-shadow: 4px 4px 3px 1px rgba(0, 0, 0, 0.24);
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    height: clamp(60px, 13vh, 300px);
+    align-items: center;
+    position: sticky;
+    top: 4px;
+    left: 0;
+    right: 0;
+    z-index: 5;
+}
+
+header nav
+{
+    padding: 4px;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li
+{
+    margin: 1rem;
+}
+nav ul li button
+{
+    height: 2.5rem;
+    width: 7vw;
+    min-width: fit-content;
+    padding: 6px 10px;
+    border: none;
+    background-color: #da62c833;
+    color: antiquewhite;
+    font-family: var(--secondary-font), sans-serif;
+    font-size: calc(0.8rem + 0.5vw);
+
+}
+#content div
+{
+    display: flex;
+    justify-content: space-around;
+    width: 90vw;
+    padding: 10px;
+    /* border: 2px solid salmon; */
+    backdrop-filter: blur(4px);
+    margin: auto;
+    align-items: center;
+}
+.logo-png
+{
+    filter: invert(100%);
+    width: calc(110px + 3vw);
+    margin: 5px;
+    height: auto;
+    position: absolute;
+    top: -50%;
+    right: 0;
+}
+.logo-png-container {
+    position: relative;
+    display: inline-block;
+    width: 25vw;
+    height: 100%;
+
+}
+.logo-png-container::after
+{
+    content: "CHIHARA";
+    width: 100%;
+    height: 100%;
+    color: beige;
+    font-family: var(--primary-font), sans-serif;
+    font-size: calc(1rem + 2vw);
+    position: absolute;
+    top: 20%;
+    right: -55%;
+    text-align: right;
+
+}
+.aside-image
+{
+    background: url('assets/images/cuisine.jpg') no-repeat center center;
+    background-size: cover;
+    width: clamp(100px, calc(0.3rem + 2vw), 200px);
+    height: clamp(350px, calc(1rem + 4vh + 1vw), 700px);
+    border-radius: 7px;
+    box-shadow: 30px 30px 40px rgba(0,0,0,.7);
+
+
+}
+.second-div-image
+{
+    width: 40%;
+    height: auto;
+    border-radius: 7px;
+    box-shadow: 30px 30px 40px rgba(0,0,0,.7);
+}
+#content div
+{
+    margin-bottom: 33px;
+}
+#content div span
+{
+    color: white;
+    display: inline-block;
+    font-size: calc(0.5rem + 3vw);
+    width: 90%;
+    text-align: left;
+    margin: 2vw;
+
+    font-family: var(--primary-font), sans-serif;
+    font-style: italic;
+}
+#content p{
+    color: white;
+    font-size: calc(1.2rem + 0.2vh);
+    font-family: var(--secondary-font), sans-serif;
+    width: 80vw;
+    padding-left: 5vw;
+    font-size: calc(1.2rem + 0.5vw);
+
+}
