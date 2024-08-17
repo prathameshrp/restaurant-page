@@ -111,5 +111,9 @@ export function menu(doc) {
 
     doc.querySelector("#content").appendChild(h2);
     doc.querySelector("#content").appendChild(gridContainer);
+ 
+        doc.querySelector("#loader").style.display = "none";
+        doc.body.style.overflow = "visible";
+    
     
 }

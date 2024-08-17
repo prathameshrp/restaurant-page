@@ -1,17 +1,19 @@
-{/* <div>
-<span>AUTHENTIC TRADITIONAL AND MODERN MEXICAN CUISINE IN TORONTO</span>
-<span class="aside-image"></span>
-</div>
-<div>
+// {/* <div>
+// <span>AUTHENTIC TRADITIONAL AND MODERN MEXICAN CUISINE IN TORONTO</span>
+// <span class="aside-image"></span>
+// </div>
+// <div>
     
-<p>Exclusive cuisines of Chihara Restaurant now in Birmingham Michigan. Experience the flavours of Chihara.</p>
-<img src="./assets/images/aside-image.jpg" alt="side image" class="second-div-image" height="250px">
+// <p>Exclusive cuisines of Chihara Restaurant now in Birmingham Michigan. Experience the flavours of Chihara.</p>
+// <img src="./assets/images/aside-image.jpg" alt="side image" class="second-div-image" height="250px">
 
-<p>Also available now - French, Japanese and other Asian cuisines. bringing a broad range of traditions and local cuisines.</p>
-</div> */}
+// <p>Also available now - French, Japanese and other Asian cuisines. bringing a broad range of traditions and local cuisines.</p>
+// </div> */
+// }
 import asideImage from "./assets/images/aside-image.jpg";
 import mainBg from "./assets/images/background.jpg";
 export function content(doc){
+    
     doc.body.style.backgroundImage = `url(${mainBg})`;
     const parentDivs = [...Array(2)].map((x) => x = doc.createElement('div'));
     const firstParentSpan1 = doc.createElement('span');
@@ -37,4 +39,10 @@ export function content(doc){
 
     //append to #content
     parentDivs.forEach((div) => doc.querySelector("#content").appendChild(div));
+
+    window.onload = function()
+    {
+        doc.querySelector("#loader").style.display = "none";
+        doc.body.style.overflow = "visible";
+    }
 }

@@ -81,6 +81,11 @@ export function aboutContent(doc)
         e.preventDefault();
     }
     );
+
+
+        doc.querySelector("#loader").style.display = "none";
+        doc.body.style.overflow = "visible";
+    
     
 
 };

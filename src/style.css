@@ -18,6 +18,8 @@ body
     background-size: cover;
     position: relative;
     z-index: 2;
+    overflow: hidden;
+
 }
 body::after
 {
@@ -50,6 +52,7 @@ header
     left: 0;
     right: 0;
     z-index: 5;
+    box-sizing: border-box;
 }
 
 header nav
@@ -85,6 +88,36 @@ nav ul li button:hover
     opacity: 0.6;
     transition: all 0.3s;
 }
+
+#loader
+{
+    background-color: grey;
+    width: 100vw;
+    margin: 0 auto;
+    height: calc(120vh - clamp(60px, 13vh, 300px));
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#loader img
+{
+    height: 50vh;
+    width: auto;
+    animation: blink 1s linear infinite;
+    
+}
+@keyframes blink {
+    0% { opacity: 0.2; }
+    50% { opacity: 1; }
+    100% { opacity: 0.2; }
+
+  }
 #content div
 {
     display: flex;
