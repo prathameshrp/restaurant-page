@@ -52,7 +52,7 @@
 </aside> */}
 
 import "./menu.css";
-import menuBg from "./assets/images/menu-bg.jpg"
+import menuBg from "./assets/images/menu-bg.jpg";
 export function menu(doc) {
     doc.body.style.backgroundImage = `url(${menuBg})`;
     doc.body.classList.add("hide-after");
