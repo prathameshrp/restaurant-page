@@ -80,6 +80,11 @@ nav ul li button
     font-size: calc(0.8rem + 0.5vw);
 
 }
+nav ul li button:hover
+{
+    opacity: 0.6;
+    transition: all 0.3s;
+}
 #content div
 {
     display: flex;
@@ -135,7 +140,7 @@ nav ul li button
 }
 .second-div-image
 {
-    width: 40%;
+    width: min(300px, 40%);
     height: auto;
     border-radius: 7px;
     box-shadow: 30px 30px 40px rgba(0,0,0,.7);
@@ -156,12 +161,12 @@ nav ul li button
     font-family: var(--primary-font), sans-serif;
     font-style: italic;
 }
-#content>p{
+#content p{
     color: white;
     font-size: calc(1.2rem + 0.2vh);
     font-family: var(--secondary-font), sans-serif;
     width: 60vw;
     text-wrap: wrap;
-    padding-left: 5vw;
+    padding: 0 5vw;
 }
 
