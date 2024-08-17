@@ -10,7 +10,9 @@
 <p>Also available now - French, Japanese and other Asian cuisines. bringing a broad range of traditions and local cuisines.</p>
 </div> */}
 import asideImage from "./assets/images/aside-image.jpg";
+import mainBg from "./assets/images/background.jpg";
 export function content(doc){
+    doc.body.style.backgroundImage = `url(${mainBg})`;
     const parentDivs = [...Array(2)].map((x) => x = doc.createElement('div'));
     const firstParentSpan1 = doc.createElement('span');
     const firstParentSpan2 = doc.createElement('span');
@@ -35,6 +37,4 @@ export function content(doc){
 
     //append to #content
     parentDivs.forEach((div) => doc.querySelector("#content").appendChild(div));
-
-
 }
