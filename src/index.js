@@ -7,7 +7,9 @@ import { menu } from "./menu.js";
 content(document);
 // aboutContent(document);
 // menu(document);
-
+if (process.env.NODE_ENV !== 'production') {
+    console.log('Looks like we are in development mode!');
+  }
 const loadPage = (function(doc){
     const homeBtn = doc.querySelector("#home");
     const menuBtn = doc.querySelector("#menuBtn");
