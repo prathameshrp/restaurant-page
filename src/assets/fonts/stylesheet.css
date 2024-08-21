@@ -47,23 +47,4 @@
 
 
 
-@font-face {
-    font-family: 'playfair_display';
-    src: url('playfairdisplaysc-bold-webfont.woff2') format('woff2'),
-         url('playfairdisplaysc-bold-webfont.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
 
-}
-
-
-
-
-@font-face {
-    font-family: 'playfair_display';
-    src: url('playfairdisplaysc-bolditalic-webfont.woff2') format('woff2'),
-         url('playfairdisplaysc-bolditalic-webfont.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-
-}
